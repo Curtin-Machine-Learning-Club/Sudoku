@@ -1,0 +1,238 @@
+html
+{
+    font-size: 100%;
+}
+
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.ContentWrapper
+{
+    padding-left: max(10px,env(safe-area-inset-left));
+    padding-right: max(10px,env(safe-area-inset-right));
+
+    flex: 1 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+.Clearfix::after, .Clearfix::before
+{
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.SiteContent
+{
+    margin-right: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.SiteContentWrapper
+{
+    display: flex;
+    padding-top: 10px;
+}
+
+.SudokuWrapper
+{
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.GameFlexWrapper
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.GameInfoWrapper
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.GameWrapper
+{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-width: 550px;
+    background-color: #f3f6fa;
+}
+
+.GameWrapper::after
+{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.GameWrapper .Game
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.GameControlsWrapper
+{
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    min-width: 250px;
+    max-height: 542px;
+    background-color: #f3f6fa;
+}
+
+.GameTable
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: #fff;
+    user-select: none;
+    border: 2px solid #344861;
+}
+
+.GameTable::after
+{
+    content: "";
+    position: absolute;
+    left: 33.3333%;
+    width: 33.3333%;
+    top: 0;
+    border-left: 2px solid #344861;
+    border-right: 2px solid #344861;
+    pointer-events: none;
+}
+
+.GameTable, .GameTable::after
+{
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.GameTable, .GameTable::after
+{
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.GameRow
+{
+    height: 11.11111%;
+}
+
+.GameRow, .GameRow tbody::after
+{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.GameCell
+{
+    flex-basis: 11.1111%;
+    box-sizing: border-box;
+    position: relative;
+    border-right: 1px solid #bec6d4;
+    border-bottom: 1px solid #bec6d4;
+    cursor: pointer;
+    transform: translateZ(0);
+}
+
+.GameCell, .GameRow
+{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.GameCell::after
+{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.GameValue .CellValue
+{
+    font-weight: 700;
+    color: #000;
+    cursor: default;
+}
+
+.CellValue
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 100;
+    color: #666;
+    text-align: center;
+}
+
+.CellValue p
+{
+    font-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50%;
+}
+
+.GameCell .HighlightTable
+{
+    background-color: #e2e7ed;
+}
+
+.GameRow, .GameTable tbody::after
+{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.GameTable tbody::after
+{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 33.3333%;
+    height: 33.4%;
+    border-top: 2px solid #344861;
+    border-bottom: 2px solid #344861;
+    pointer-events: none;
+}
+
+.GameTable tbody
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
